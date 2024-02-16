@@ -11,18 +11,15 @@ import javax.swing.JPanel;
  */
 public class jf_RNP extends javax.swing.JFrame {
 
-    Civil civil1;
-    
+    //Civil civil1 = new Civil(new ArrayList(), "Jose", "Seron", "joseseron123", "Francisco Morazan", new Date());
 
     /**
      * Creates new form jf_RNP
      */
     public jf_RNP() {
-        civil1 = new Civil(new ArrayList(), "Jose", "Seron", "joseseron123", "Francisco Morazan", new Date(104, 4, 28));
 
         initComponents();
         PanelLogIn.setVisible(true);
-
     }
 
     /**
@@ -34,7 +31,6 @@ public class jf_RNP extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane2 = new javax.swing.JTabbedPane();
         PanelLogIn = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -43,7 +39,6 @@ public class jf_RNP extends javax.swing.JFrame {
         tf_nombreCompletoLogIn = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,7 +95,7 @@ public class jf_RNP extends javax.swing.JFrame {
                     .addGroup(PanelLogInLayout.createSequentialGroup()
                         .addGap(206, 206, 206)
                         .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(70, 234, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelLogInLayout.setVerticalGroup(
             PanelLogInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +112,7 @@ public class jf_RNP extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(30, 30, 30))
         );
@@ -126,27 +121,21 @@ public class jf_RNP extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(572, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112))
+            .addGap(0, 700, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 300, Short.MAX_VALUE)
                     .addComponent(PanelLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 300, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(371, Short.MAX_VALUE))
+            .addGap(0, 466, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 198, Short.MAX_VALUE)
                     .addComponent(PanelLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 199, Short.MAX_VALUE)))
         );
 
         pack();
@@ -165,13 +154,12 @@ public class jf_RNP extends javax.swing.JFrame {
         String nombreIngresado = tf_nombreCompletoLogIn.getText();
         String contraIngresada = jPasswordField1.getText();
 
-        if ((nombreIngresado.equals(civil1.nombre + " " + civil1.apellido)) && (contraIngresada.equals(civil1.password))) {
-            PanelLogIn.setVisible(false);
-        } else {
-            JOptionPane.showMessageDialog(this,
-                    "Credenciales Incorrectas");
-        }
-
+//        if ((nombreIngresado.equals(civil1.nombre + " " + civil1.apellido)) && (contraIngresada.equals(civil1.password))) {
+//            PanelLogIn.setVisible(false);
+//        } else {
+//            JOptionPane.showMessageDialog(this,
+//                    "Credenciales Incorrectas");
+//        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
@@ -218,8 +206,6 @@ public class jf_RNP extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextField tf_nombreCompletoLogIn;
     // End of variables declaration//GEN-END:variables
 }
