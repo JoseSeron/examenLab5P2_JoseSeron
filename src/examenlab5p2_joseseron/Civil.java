@@ -1,13 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package examenlab5p2_joseseron;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
  * @author joser
  */
-public class Civil {
-    
+public class Civil extends Usuario {
+
+    ArrayList<Tramite> tramites;
+
+    public Civil() {
+        super();
+    }
+
+    public Civil(ArrayList<Tramite> tramites) {
+        this.tramites = tramites;
+    }
+
+    public ArrayList<Tramite> getTramites() {
+        return tramites;
+    }
+
+    public void setTramites(ArrayList<Tramite> tramites) {
+        this.tramites = tramites;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Civil{" + "tramites=" + tramites + '}';
+    }
+
 }
