@@ -1,6 +1,9 @@
 
 package examenlab5p2_joseseron;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author joser
@@ -12,6 +15,7 @@ public class ExamenLab5P2_JoseSeron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+     
     }
     
 }

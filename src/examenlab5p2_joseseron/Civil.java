@@ -19,6 +19,12 @@ public class Civil extends Usuario {
         this.tramites = tramites;
     }
 
+    public Civil(ArrayList<Tramite> tramites, String nombre, String apellido, String password, String departamento, Date fechaNacimiento) {
+        super(nombre, apellido, password, departamento, fechaNacimiento);
+        this.tramites = tramites;
+    }
+
+  
     public ArrayList<Tramite> getTramites() {
         return tramites;
     }
