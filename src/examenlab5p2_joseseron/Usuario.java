@@ -7,8 +7,6 @@ import java.util.Random;
  *
  * @author joser
  */
- 
-
 public class Usuario {
 
     String nombre, apellido, password, departamento, sexo, numeroIdentidad;
@@ -23,33 +21,34 @@ public class Usuario {
         this.password = password;
         this.departamento = departamento;
         this.sexo = sexo;
-        this.numeroIdentidad = crearID(departamento);
+
         this.fechaNacimiento = fechaNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
+
     }
 
-    public String crearID(String departamento){
+    public String crearID(String departamento) {
         Random random = new Random();
-    String ID = null;
+        String ID = null;
         if (departamento.equalsIgnoreCase("Francisco Morazan")) {
-            ID+=01;
-            ID+= random.nextInt(01, 29);
-            
-        }else if (departamento.equalsIgnoreCase("Cortes")) {
-            ID+=02;
-            ID+= random.nextInt(01, 13);
-        }else if (departamento.equalsIgnoreCase("Comayagua")) {
-            ID+=03;
-            ID+= random.nextInt(01, 22);
+            ID += 01;
+            ID += random.nextInt(01, 29);
+
+        } else if (departamento.equalsIgnoreCase("Cortes")) {
+            ID += 02;
+            ID += random.nextInt(01, 13);
+        } else if (departamento.equalsIgnoreCase("Comayagua")) {
+            ID += 03;
+            ID += random.nextInt(01, 22);
         }
-         
-        ID+= this.fechaNacimiento.getYear()+1900;
+
+        ID += this.fechaNacimiento.getYear() + 1900;
         ID += random.nextInt(00000, 100000);
-        
+
         return ID;
-    
+
     }
-    
-    
+
     public String getNombre() {
         return nombre;
     }
